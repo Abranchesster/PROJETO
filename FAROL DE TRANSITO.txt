@@ -1,0 +1,38 @@
+int verde = 10;
+int amarelo = 9;
+int vermelho = 8;
+int cont = 1;
+
+void setup()
+{ 
+  pinMode (verde, OUTPUT);
+  pinMode (amarelo, OUTPUT);
+  pinMode (vermelho, OUTPUT);
+}
+
+void loop()
+{
+  farol();
+}
+
+void farol()
+{
+  digitalWrite(verde, HIGH);
+  delay (4000);
+  digitalWrite (verde, LOW);
+  
+  for (cont=1; cont<= 7; cont++)
+  {
+    digitalWrite(amarelo, HIGH);
+    delay (1000);
+    digitalWrite (amarelo, LOW);
+    delay(200);
+  }
+  
+  digitalWrite(vermelho, HIGH);
+  delay (5000);
+  digitalWrite (vermelho, LOW);
+  delay(100);
+  
+  cont=1;
+}
